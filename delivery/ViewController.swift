@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkInOut.layer.cornerRadius = 15
+        checkInOut.layer.cornerRadius = 10
 
     }
 
