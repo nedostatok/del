@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RNh-6c-kAp">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="delivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELIVERY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-Uw-sRc">
+                                <rect key="frame" x="16" y="73" width="288" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="fast-food-restaurant-fastfood-sketch-poster-vector-18456393" translatesAutoresizingMaskIntoConstraints="NO" id="QWq-Kh-0fN">
+                                <rect key="frame" x="16" y="123" width="288" height="161"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order food from any restaraunt with unlimited deliveries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMf-A0-9Hp">
+                                <rect key="frame" x="16" y="300" width="288" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x82-xN-pel">
+                                <rect key="frame" x="75" y="358" width="170" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Check in out"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9t-5y-4kV">
+                                <rect key="frame" x="83" y="430" width="154" height="30"/>
+                                <state key="normal" title="Alredy member?Log in"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vMf-A0-9Hp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="89e-UY-ibU"/>
+                            <constraint firstItem="x82-xN-pel" firstAttribute="top" secondItem="vMf-A0-9Hp" secondAttribute="bottom" constant="17" id="9Co-eh-UeB"/>
+                            <constraint firstItem="SAI-Uw-sRc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EYa-ay-vfe"/>
+                            <constraint firstItem="m9t-5y-4kV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hz1-ha-M9S"/>
+                            <constraint firstItem="m9t-5y-4kV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="NgQ-CJ-pcO"/>
+                            <constraint firstItem="vMf-A0-9Hp" firstAttribute="top" secondItem="QWq-Kh-0fN" secondAttribute="bottom" constant="16" id="P8P-Am-eNi"/>
+                            <constraint firstItem="m9t-5y-4kV" firstAttribute="top" secondItem="x82-xN-pel" secondAttribute="bottom" constant="42" id="PIj-JD-TK0"/>
+                            <constraint firstItem="QWq-Kh-0fN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="V5B-Gx-KHz"/>
+                            <constraint firstItem="x82-xN-pel" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="XPq-Zv-coH"/>
+                            <constraint firstItem="QWq-Kh-0fN" firstAttribute="top" secondItem="SAI-Uw-sRc" secondAttribute="bottom" constant="8" id="bOS-dK-Gn9"/>
+                            <constraint firstItem="vMf-A0-9Hp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ejQ-zT-DMe"/>
+                            <constraint firstItem="x82-xN-pel" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f9D-nv-4gm"/>
+                            <constraint firstItem="SAI-Uw-sRc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="gZS-sP-KGX"/>
+                            <constraint firstItem="QWq-Kh-0fN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p6d-FQ-hPQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m9t-5y-4kV" secondAttribute="bottom" constant="20" id="r32-9c-If5"/>
+                            <constraint firstItem="SAI-Uw-sRc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rhZ-8M-4d1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8rz-Dc-awF"/>
+                    <connections>
+                        <outlet property="checkInOut" destination="x82-xN-pel" id="7IV-y1-TAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076.25" y="99.295774647887328"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ep-dB-mjJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RNh-6c-kAp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TvK-Pg-m4i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y38-la-lT7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0Q-Hj-KAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fast-food-restaurant-fastfood-sketch-poster-vector-18456393" width="707" height="994"/>
+    </resources>
+</document>
