@@ -13,6 +13,9 @@
 		CE3068F3249CA7F400932310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3068F1249CA7F400932310 /* Main.storyboard */; };
 		CE3068F5249CA7F500932310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3068F4249CA7F500932310 /* Assets.xcassets */; };
 		CE3068F8249CA7F500932310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3068F6249CA7F500932310 /* LaunchScreen.storyboard */; };
+		CE89E4CF249E0F5C00175DAD /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4CE249E0F5C00175DAD /* RestaurantViewController.swift */; };
+		CE89E4D1249E106500175DAD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4D0249E106500175DAD /* Restaurant.swift */; };
+		CE89E4D4249E1B0400175DAD /* CastomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4D3249E1B0400175DAD /* CastomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CE3068F4249CA7F500932310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3068F7249CA7F500932310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3068F9249CA7F500932310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE89E4CE249E0F5C00175DAD /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		CE89E4D0249E106500175DAD /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		CE89E4D3249E1B0400175DAD /* CastomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				CE3068EB249CA7F400932310 /* AppDelegate.swift */,
+				CE89E4D2249E127C00175DAD /* Model */,
 				CE3068ED249CA7F400932310 /* SceneDelegate.swift */,
 				CE3068EF249CA7F400932310 /* ViewController.swift */,
 				CE3068F1249CA7F400932310 /* Main.storyboard */,
+				CE89E4CE249E0F5C00175DAD /* RestaurantViewController.swift */,
+				CE89E4D3249E1B0400175DAD /* CastomTableViewCell.swift */,
 				CE3068F4249CA7F500932310 /* Assets.xcassets */,
 				CE3068F6249CA7F500932310 /* LaunchScreen.storyboard */,
 				CE3068F9249CA7F500932310 /* Info.plist */,
 			);
 			path = delivery;
+			sourceTree = "<group>";
+		};
+		CE89E4D2249E127C00175DAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE89E4D0249E106500175DAD /* Restaurant.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE89E4D1249E106500175DAD /* Restaurant.swift in Sources */,
 				CE3068F0249CA7F400932310 /* ViewController.swift in Sources */,
+				CE89E4CF249E0F5C00175DAD /* RestaurantViewController.swift in Sources */,
 				CE3068EC249CA7F400932310 /* AppDelegate.swift in Sources */,
+				CE89E4D4249E1B0400175DAD /* CastomTableViewCell.swift in Sources */,
 				CE3068EE249CA7F400932310 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,17 @@ class ViewController: UIViewController {
         checkInOut.layer.cornerRadius = 10
 
     }
-
-
+    @IBAction func goToChoseRest(_ sender: UIButton) {
+        let toChoiseRest = storyboard?.instantiateViewController(identifier: "tableViev")
+        navigationController?.pushViewController(toChoiseRest!, animated: true)
+    }
+    
+    @IBAction func alredyButton(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "HI", message: "Comming soon", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
