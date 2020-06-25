@@ -14,4 +14,6 @@ struct Menu {
     let foodPrice: String
     
     let drink: [String]
+    
+    let deliveryType: [DeliveryType]
 }

@@ -16,5 +16,7 @@ struct Restaurant {
     let folowers: String
     let image: String
     
+    
+    
     let menu: [Menu]
 }

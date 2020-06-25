@@ -42,6 +42,16 @@ class DrinkViewController: UIViewController {
         }
     }
     
+    @IBAction func toDelVaries(_ sender: UIButton) {
+        guard let goToDelivery = storyboard?.instantiateViewController(identifier: "DeliveryVaryViewController") as? DeliveryVaryViewController else { return }
+        
+        goToDelivery.foodName = rest?.foodName
+        goToDelivery.foodPrice = rest?.foodPrice
+        goToDelivery.rest = rest
+        navigationController?.pushViewController(goToDelivery, animated: true)
+    
+    }
+    
     /*
     // MARK: - Navigation
 
