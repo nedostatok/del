@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     }
     @IBAction func goToChoseRest(_ sender: UIButton) {
-        let toChoiseRest = storyboard?.instantiateViewController(identifier: "tableViev")
+        let toChoiseRest = storyboard?.instantiateViewController(identifier: "tableViev") as? RestaurantViewController
         navigationController?.pushViewController(toChoiseRest!, animated: true)
     }
     

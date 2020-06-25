@@ -10,10 +10,11 @@ import Foundation
 
 struct Restaurant {
     let name: String
-    let check: Int
+    let check: String
     let type: String
     let deliveryTime: String
-    let folowers: Int
+    let folowers: String
     let image: String
     
+    let menu: [Menu]
 }

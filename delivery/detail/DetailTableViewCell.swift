@@ -1,21 +1,18 @@
 //
-//  CastomTableViewCell.swift
+//  DetailTableViewCell.swift
 //  delivery
 //
-//  Created by User on 20.06.2020.
+//  Created by User on 23.06.2020.
 //  Copyright © 2020 sad. All rights reserved.
 //
 
 import UIKit
 
-class CastomTableViewCell: UITableViewCell {
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var restName: UILabel!
-    @IBOutlet weak var restType: UILabel!
-    @IBOutlet weak var averageCheck: UILabel!
-    @IBOutlet weak var deliveryTime: UILabel!
-    @IBOutlet weak var followers: UILabel!
+class DetailTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var foodName: UILabel!
+    
+    @IBOutlet weak var foodPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +23,11 @@ class CastomTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(rest: Menu){
+        foodName.text = rest.foodName
+        foodPrice.text = String(rest.foodPrice)
     }
 
 }
