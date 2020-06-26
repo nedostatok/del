@@ -13,8 +13,6 @@ class CheckOutViewController: UIViewController {
     var foodPrice: String?
     var deliveryVary: DeliveryType?
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +20,9 @@ class CheckOutViewController: UIViewController {
     }
     
 
+    @IBAction func toRootVC(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     /*
     // MARK: - Navigation
 
@@ -41,16 +42,36 @@ extension CheckOutViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell1 = tableView.dequeueReusableCell(withIdentifier: "cell1") as? DelyveryTypeTableViewCell else {return UITableViewCell()}
-        let model = AllModel(delPack: deliveryVary!.type, delPrice: deliveryVary!.price)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CheckTableViewCell else {return UITableViewCell()}
+
         
-        cell1.delPrice.text = model.delPrice
-        cell1.delType.text = model.delPack
+        switch indexPath.row {
+        case 0:
+            cell.titleLabel.text = deliveryVary?.type
+            cell.moneyLabel.text = deliveryVary?.price
+        case 1:
+            cell.titleLabel.text = self.foodName
+            cell.moneyLabel.text = self.foodPrice
+        case 2:
+            cell.titleLabel.text = "Total"
+            
+            let fprice = Double(Int(foodPrice!)!)
+            let dprice = deliveryVary!.price
+            let d = Double(dprice)
+            cell.moneyLabel.text = String(fprice + d!) + "грн"
+            
+            
+        default:
+            break
+        }
+        
+
  
         
  
 
-       return cell1
+       return cell
+
 }
 
 }

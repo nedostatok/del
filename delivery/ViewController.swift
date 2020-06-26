@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var checkInOut: UIButton!
     
     override func viewDidLoad() {

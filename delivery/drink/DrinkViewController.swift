@@ -14,15 +14,12 @@ class DrinkViewController: UIViewController {
     @IBOutlet weak var drinkCount: UILabel!
     var count: Int = 0
     
-    
     var rest: Menu?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         
-
         // Do any additional setup after loading the view.
     }
     func configure() {
@@ -31,22 +28,26 @@ class DrinkViewController: UIViewController {
         
     }
     
-    @IBAction func actionDrink(_ sender: UIButton) {
+    @IBAction func plussAction(_ sender: UIButton) {
+        count += 1
+        drinkCount.text = String(count)
+    }
+    @IBAction func minusAction(_ sender: UIButton) {
         
-        if sender.tag == 0 {
-            count -= 1
-            drinkCount.text = String(count)
+        if count < 1 {
+            
         } else {
-            count += 1
+            count -= 1
             drinkCount.text = String(count)
         }
     }
     
+    
     @IBAction func toDelVaries(_ sender: UIButton) {
         guard let goToDelivery = storyboard?.instantiateViewController(identifier: "DeliveryVaryViewController") as? DeliveryVaryViewController else { return }
         
-        goToDelivery.foodName = rest?.foodName
-        goToDelivery.foodPrice = rest?.foodPrice
+        goToDelivery.foodName = foodName.text
+        goToDelivery.foodPrice = foodPrice.text
         goToDelivery.rest = rest
         navigationController?.pushViewController(goToDelivery, animated: true)
     
@@ -75,7 +76,6 @@ extension DrinkViewController: UITableViewDataSource {
         
         cell.textLabel?.text = rest?.drink[indexPath.row]
         
-        
         return cell
     }
 
@@ -84,12 +84,19 @@ extension DrinkViewController: UITableViewDataSource {
         
         if selected!.accessoryType == .checkmark{
             selected!.accessoryType = .none
+            
         } else {
             selected?.accessoryType = .checkmark
-        }
-    }
             
+        }
+        
+        
+        
+    }
+    
 }
+            
+
 
 
 

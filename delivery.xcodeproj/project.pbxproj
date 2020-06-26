@@ -22,9 +22,9 @@
 		CE89E4CF249E0F5C00175DAD /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4CE249E0F5C00175DAD /* RestaurantViewController.swift */; };
 		CE89E4D1249E106500175DAD /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4D0249E106500175DAD /* Restaurant.swift */; };
 		CE89E4D4249E1B0400175DAD /* CastomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89E4D3249E1B0400175DAD /* CastomTableViewCell.swift */; };
+		CEA34BC824A6084300B5A68B /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA34BC724A6084300B5A68B /* CheckTableViewCell.swift */; };
 		CEB4F92924A3470C0049F3D6 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4F92824A3470C0049F3D6 /* DrinkViewController.swift */; };
 		CEF8F3ED24A4EC4A00484442 /* allModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8F3EC24A4EC4A00484442 /* allModel.swift */; };
-		CEFFDC9D24A4F1FD00D31DFD /* DelyveryTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFFDC9C24A4F1FD00D31DFD /* DelyveryTypeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		CE89E4CE249E0F5C00175DAD /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		CE89E4D0249E106500175DAD /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		CE89E4D3249E1B0400175DAD /* CastomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomTableViewCell.swift; sourceTree = "<group>"; };
+		CEA34BC724A6084300B5A68B /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
 		CEB4F92824A3470C0049F3D6 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
 		CEF8F3EC24A4EC4A00484442 /* allModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allModel.swift; sourceTree = "<group>"; };
-		CEFFDC9C24A4F1FD00D31DFD /* DelyveryTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelyveryTypeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				CE6BEEDD24A4D49300A7EBF6 /* CheckOutViewController.swift */,
-				CEFFDC9C24A4F1FD00D31DFD /* DelyveryTypeTableViewCell.swift */,
+				CEA34BC724A6084300B5A68B /* CheckTableViewCell.swift */,
 			);
 			path = check;
 			sourceTree = "<group>";
@@ -228,9 +228,9 @@
 				CE6BEEDE24A4D49300A7EBF6 /* CheckOutViewController.swift in Sources */,
 				CE89E4D1249E106500175DAD /* Restaurant.swift in Sources */,
 				CE3068F0249CA7F400932310 /* ViewController.swift in Sources */,
+				CEA34BC824A6084300B5A68B /* CheckTableViewCell.swift in Sources */,
 				CE89E4CF249E0F5C00175DAD /* RestaurantViewController.swift in Sources */,
 				CE3068EC249CA7F400932310 /* AppDelegate.swift in Sources */,
-				CEFFDC9D24A4F1FD00D31DFD /* DelyveryTypeTableViewCell.swift in Sources */,
 				CE89E4D4249E1B0400175DAD /* CastomTableViewCell.swift in Sources */,
 				CE060B8124A0AC5900C9F1E9 /* menu.swift in Sources */,
 				CE3068EE249CA7F400932310 /* SceneDelegate.swift in Sources */,

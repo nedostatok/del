@@ -1,17 +1,17 @@
 //
-//  DelyveryTypeTableViewCell.swift
+//  CheckTableViewCell.swift
 //  delivery
 //
-//  Created by User on 25.06.2020.
+//  Created by User on 26.06.2020.
 //  Copyright © 2020 sad. All rights reserved.
 //
 
 import UIKit
 
-class DelyveryTypeTableViewCell: UITableViewCell {
+class CheckTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var delType: UILabel!
-    @IBOutlet weak var delPrice: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +23,5 @@ class DelyveryTypeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
 
 }

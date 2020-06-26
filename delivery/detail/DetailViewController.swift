@@ -18,15 +18,10 @@ class DetailViewController: UIViewController {
     
     var restourants: Restaurant?
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cunfigureInterface()
-        
- 
-
         
     }
     

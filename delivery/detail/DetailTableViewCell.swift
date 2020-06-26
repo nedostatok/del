@@ -11,7 +11,6 @@ import UIKit
 class DetailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var foodName: UILabel!
-    
     @IBOutlet weak var foodPrice: UILabel!
     
     override func awakeFromNib() {

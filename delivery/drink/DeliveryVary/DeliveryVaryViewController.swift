@@ -13,7 +13,6 @@ class DeliveryVaryViewController: UIViewController {
     var foodPrice: String?
     
     var rest: Menu?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,24 +20,23 @@ class DeliveryVaryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func goToCheckout(_ sender: UIButton) {
-        if sender.tag == 0 {
-            guard let goToCheck = storyboard?.instantiateViewController(identifier: "CheckOutViewController") as? CheckOutViewController else { return }
-            goToCheck.foodName = self.foodName!
-            goToCheck.foodPrice = self.foodPrice!
-            goToCheck.deliveryVary = rest?.deliveryType[0]
-            navigationController?.pushViewController(goToCheck, animated: true)
-        } else {
-            guard let goToCheck = storyboard?.instantiateViewController(identifier: "CheckOutViewController") as? CheckOutViewController else { return }
-            goToCheck.foodName = self.foodName!
-            goToCheck.foodPrice = self.foodPrice!
-            goToCheck.deliveryVary = rest?.deliveryType[1]
-            navigationController?.pushViewController(goToCheck, animated: true)
-        }
-    }
-    
 
     
+    @IBAction func getUnlimDelivery(_ sender: UIButton) {
+        guard  let goToCheck = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as? CheckOutViewController else { return }
+        goToCheck.foodName = rest?.foodName
+        goToCheck.foodPrice = rest?.foodPrice
+        goToCheck.deliveryVary = rest?.deliveryType[0]
+        navigationController?.pushViewController(goToCheck, animated: true)
+    }
+    
+    @IBAction func getBasicDelivery(_ sender: Any) {
+        guard  let goToCheck = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as? CheckOutViewController else { return }
+        goToCheck.foodName = rest?.foodName
+        goToCheck.foodPrice = rest?.foodPrice
+        goToCheck.deliveryVary = rest?.deliveryType[1]
+        navigationController?.pushViewController(goToCheck, animated: true)
+    }
     
     /*
     // MARK: - Navigation
