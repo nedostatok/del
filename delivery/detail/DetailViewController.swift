@@ -59,10 +59,10 @@ extension DetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? DetailTableViewCell else {return UITableViewCell()}
         
-        let restArray = restourants?.menu[indexPath.row]
+        let restArray = restourants?.menu[indexPath.row] 
         
         cell.configure(rest: restArray!)
-        
+
         return cell
         
     }

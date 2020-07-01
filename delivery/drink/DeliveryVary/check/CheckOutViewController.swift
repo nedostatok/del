@@ -42,7 +42,7 @@ extension CheckOutViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CheckTableViewCell else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CheckTableViewCell else { return UITableViewCell() }
 
         
         switch indexPath.row {
@@ -59,7 +59,6 @@ extension CheckOutViewController: UITableViewDataSource{
             let dprice = deliveryVary!.price
             let d = Double(dprice)
             cell.moneyLabel.text = String(fprice + d!) + "грн"
-            
             
         default:
             break

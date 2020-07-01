@@ -19,9 +19,9 @@ class DrinkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        
         // Do any additional setup after loading the view.
     }
+    
     func configure() {
         foodName.text = rest?.foodName
         foodPrice.text = rest?.foodPrice
@@ -32,8 +32,8 @@ class DrinkViewController: UIViewController {
         count += 1
         drinkCount.text = String(count)
     }
+    
     @IBAction func minusAction(_ sender: UIButton) {
-        
         if count < 1 {
             
         } else {
@@ -42,7 +42,6 @@ class DrinkViewController: UIViewController {
         }
     }
     
-    
     @IBAction func toDelVaries(_ sender: UIButton) {
         guard let goToDelivery = storyboard?.instantiateViewController(identifier: "DeliveryVaryViewController") as? DeliveryVaryViewController else { return }
         
@@ -50,7 +49,6 @@ class DrinkViewController: UIViewController {
         goToDelivery.foodPrice = foodPrice.text
         goToDelivery.rest = rest
         navigationController?.pushViewController(goToDelivery, animated: true)
-    
     }
     
     /*
@@ -87,13 +85,15 @@ extension DrinkViewController: UITableViewDataSource {
             
         } else {
             selected?.accessoryType = .checkmark
-            
         }
-        
-        
-        
     }
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let selected = tableView.cellForRow(at: indexPath)
+        
+        if selected?.accessoryType == .checkmark {
+            selected!.accessoryType = .none
+        }
+    }
 }
             
 
