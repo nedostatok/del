@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         cunfigureInterface()
-        
     }
     
     func cunfigureInterface() {
@@ -34,18 +33,14 @@ class DetailViewController: UIViewController {
         restType.font = .boldSystemFont(ofSize: 17)
         deliveryTime.text = restourants?.deliveryTime
         deliveryTime.font = .boldSystemFont(ofSize: 17)
-        
-        let date = Date()
-        let calendar = Calendar.current
-        
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        let second = calendar.component(.second, from: date)
-        
-        timeLabel.text = "\(hour):\(minutes):\(second)"
-        
-    }
 
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { (timer) in
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm:ss"
+            self.timeLabel.text = dateFormatter.string(from: date)
+        }
+    }
 }
 
 extension DetailViewController: UITableViewDelegate {}
@@ -53,7 +48,6 @@ extension DetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restourants?.menu.count ?? 0
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,7 +58,6 @@ extension DetailViewController: UITableViewDataSource {
         cell.configure(rest: restArray!)
 
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

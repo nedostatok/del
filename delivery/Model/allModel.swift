@@ -11,6 +11,4 @@ import Foundation
 struct AllModel {
     let delPack: String
     let delPrice: String
-
-
 }

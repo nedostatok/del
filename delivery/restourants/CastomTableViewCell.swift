@@ -37,6 +37,4 @@ class CastomTableViewCell: UITableViewCell {
         followers.text = rest.folowers
         
     }
-
-
 }

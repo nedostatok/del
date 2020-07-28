@@ -9,11 +9,9 @@
 import Foundation
 
 struct Menu {
-    
     let foodName: String
     let foodPrice: String
     
     let drink: [String]
-    
     let deliveryType: [DeliveryType]
 }

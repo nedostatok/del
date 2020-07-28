@@ -20,8 +20,6 @@ class DeliveryVaryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    
     @IBAction func getUnlimDelivery(_ sender: UIButton) {
         guard  let goToCheck = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as? CheckOutViewController else { return }
         goToCheck.foodName = rest?.foodName
@@ -37,15 +35,4 @@ class DeliveryVaryViewController: UIViewController {
         goToCheck.deliveryVary = rest?.deliveryType[1]
         navigationController?.pushViewController(goToCheck, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

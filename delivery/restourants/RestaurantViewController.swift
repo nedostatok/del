@@ -32,7 +32,6 @@ class RestaurantViewController: UIViewController {
 }
 
 extension RestaurantViewController: UITableViewDelegate{}
-
 extension RestaurantViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurantsArray.count
@@ -47,9 +46,6 @@ extension RestaurantViewController: UITableViewDataSource{
         cell.logoImage?.layer.cornerRadius = 30.0
         cell.logoImage?.clipsToBounds = true
 
-        
-
-        
         return cell
     }
     
