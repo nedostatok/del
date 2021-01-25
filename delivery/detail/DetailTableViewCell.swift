@@ -10,23 +10,19 @@ import UIKit
 
 class DetailTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var foodName: UILabel!
-    @IBOutlet weak var foodPrice: UILabel!
+    @IBOutlet private weak var foodName: UILabel!
+    @IBOutlet private weak var foodPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(rest: Menu){
         foodName.text = rest.foodName
         foodPrice.text = String(rest.foodPrice)
     }
-
 }

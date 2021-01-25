@@ -9,23 +9,36 @@
 import UIKit
 
 class CastomTableViewCell: UITableViewCell {
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var restName: UILabel!
-    @IBOutlet weak var restType: UILabel!
-    @IBOutlet weak var averageCheck: UILabel!
-    @IBOutlet weak var deliveryTime: UILabel!
-    @IBOutlet weak var followers: UILabel!
-    
+    @IBOutlet private weak var logoImage: UIImageView!
+    @IBOutlet private weak var restName: UILabel!
+    @IBOutlet private weak var restType: UILabel!
+    @IBOutlet private weak var averageCheck: UILabel!
+    @IBOutlet private weak var deliveryTime: UILabel!
+    @IBOutlet private weak var followers: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        createLayerSettings()
+        createRoundForImgView()
     }
-
+    
+    func createLayerSettings(){
+        let colorForBorder = UIColor.gray
+        
+        self.layer.borderWidth = 1
+        self.layer.borderColor = colorForBorder.cgColor
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = 15
+        self.backgroundColor = .cyan
+    }
+    
+    func createRoundForImgView(){
+        logoImage?.layer.cornerRadius = 30.0
+        logoImage?.clipsToBounds = true
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func configure(rest: Restaurant){

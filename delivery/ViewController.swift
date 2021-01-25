@@ -9,25 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var checkInOut: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkInOut.layer.cornerRadius = 10
-
+        checkInOut.layer.cornerRadius = 15
     }
+    
     @IBAction func goToChoseRest(_ sender: UIButton) {
-        let toChoiseRest = storyboard?.instantiateViewController(identifier: "tableViev") as? RestaurantViewController
-        navigationController?.pushViewController(toChoiseRest!, animated: true)
+        guard let toChoiseRest = storyboard?.instantiateViewController(identifier: "tableViev") as? RestaurantViewController else { return }
+        navigationController?.pushViewController(toChoiseRest, animated: true)
     }
     
     @IBAction func alredyButton(_ sender: UIButton) {
+        createLoginAlert()
+    }
+    
+    func createLoginAlert() {
         let alertController = UIAlertController(title: "HI", message: "Comming soon", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(alertAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
 }
 

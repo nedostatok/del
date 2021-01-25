@@ -9,19 +9,26 @@
 import UIKit
 
 class DeliveryVaryViewController: UIViewController {
+    @IBOutlet weak var unlimButton: UIButton!
+    @IBOutlet weak var basicButton: UIButton!
+    
     var foodName: String?
     var foodPrice: String?
-    
     var rest: Menu?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureButtons()
+    }
+    
+    func configureButtons() {
+        unlimButton.layer.cornerRadius = 10
+        basicButton.layer.cornerRadius = 10
     }
     
     @IBAction func getUnlimDelivery(_ sender: UIButton) {
         guard  let goToCheck = storyboard?.instantiateViewController(withIdentifier: "CheckOutViewController") as? CheckOutViewController else { return }
+        
         goToCheck.foodName = rest?.foodName
         goToCheck.foodPrice = rest?.foodPrice
         goToCheck.deliveryVary = rest?.deliveryType[0]

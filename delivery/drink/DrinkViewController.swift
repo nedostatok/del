@@ -12,20 +12,18 @@ class DrinkViewController: UIViewController {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var drinkCount: UILabel!
-    var count: Int = 0
     
+    var count: Int = 0
     var rest: Menu?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        // Do any additional setup after loading the view.
     }
     
     func configure() {
         foodName.text = rest?.foodName
         foodPrice.text = rest?.foodPrice
-        
     }
     
     @IBAction func plussAction(_ sender: UIButton) {
@@ -65,26 +63,26 @@ extension DrinkViewController: UITableViewDataSource {
         
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selected = tableView.cellForRow(at: indexPath)
+        guard let selected = tableView.cellForRow(at: indexPath) else { return }
         
-        if selected!.accessoryType == .checkmark{
-            selected!.accessoryType = .none
+        if selected.accessoryType == .checkmark{
+            selected.accessoryType = .none
         } else {
-            selected?.accessoryType = .checkmark
+            selected.accessoryType = .checkmark
         }
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let selected = tableView.cellForRow(at: indexPath)
+        guard let selected = tableView.cellForRow(at: indexPath) else { return }
         
-        if selected?.accessoryType == .checkmark {
-            selected!.accessoryType = .none
+        if selected.accessoryType == .checkmark {
+            selected.accessoryType = .none
         }
     }
 }
-            
+
 
 
 

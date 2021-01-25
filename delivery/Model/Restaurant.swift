@@ -15,6 +15,6 @@ struct Restaurant {
     let deliveryTime: String
     let folowers: String
     let image: String
-
+    
     let menu: [Menu]
 }

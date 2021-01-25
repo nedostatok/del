@@ -17,10 +17,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     var restourants: Restaurant?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         cunfigureInterface()
     }
     
@@ -33,7 +32,7 @@ class DetailViewController: UIViewController {
         restType.font = .boldSystemFont(ofSize: 17)
         deliveryTime.text = restourants?.deliveryTime
         deliveryTime.font = .boldSystemFont(ofSize: 17)
-
+        
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { (timer) in
             let date = Date()
             let dateFormatter = DateFormatter()
@@ -56,14 +55,14 @@ extension DetailViewController: UITableViewDataSource {
         let restArray = restourants?.menu[indexPath.row] 
         
         cell.configure(rest: restArray!)
-
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let goToDrink = storyboard?.instantiateViewController(identifier: "DrinkViewController") as? DrinkViewController else { return }
         goToDrink.rest = restourants?.menu[indexPath.row]
-
+        
         navigationController?.pushViewController(goToDrink, animated: true)
     }
 }

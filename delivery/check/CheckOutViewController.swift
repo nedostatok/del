@@ -15,8 +15,6 @@ class CheckOutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func toRootVC(_ sender: UIButton) {
@@ -25,7 +23,8 @@ class CheckOutViewController: UIViewController {
 }
 
 extension CheckOutViewController: UITableViewDelegate{}
-extension CheckOutViewController: UITableViewDataSource{
+extension CheckOutViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -43,12 +42,11 @@ extension CheckOutViewController: UITableViewDataSource{
         case 2:
             cell.titleLabel.text = "Total"
             
-            let fprice = Double(Int(foodPrice!)!)
-            let dprice = deliveryVary!.price
-            let d = Double(dprice)
-            
-            cell.moneyLabel.text = String(fprice + d!) + "грн"
-            
+            if let foodPrice = foodPrice , let deliveryPrice = deliveryVary?.price {
+                let doubleFoodPrice = Double(Int(foodPrice)!)
+                let doubleDeliveryPrice = Double(deliveryPrice)
+                cell.moneyLabel.text = String(doubleFoodPrice + doubleDeliveryPrice!) + "грн"
+            }
         default:
             break
         }
